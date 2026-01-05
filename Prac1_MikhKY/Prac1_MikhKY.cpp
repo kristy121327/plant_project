@@ -7,7 +7,7 @@
 #include <locale>
 
 using namespace std;
-//hello
+
 enum class Month {
     ЯНВАРЬ, ФЕВРАЛЬ, МАРТ, АПРЕЛЬ, МАЙ, ИЮНЬ,
     ИЮЛЬ, АВГУСТ, СЕНТЯБРЬ, ОКТЯБРЬ, НОЯБРЬ, ДЕКАБРЬ
