@@ -251,7 +251,17 @@ int main() {
     f << "PRINT\n";
     f.close();
 
-    PlantContainer c;
-    processFile("plants.txt", c);
+     try {
+        PlantContainer c;
+        processFile("plants.txt", c);
+    } 
+    catch (const std::invalid_argument& e) {
+        std::cerr << "Ошибка при обработке данных: " << e.what() << std::endl;
+        return 1;
+    }
+    catch (const std::exception& e) {
+        std::cerr << "Неизвестная ошибка: " << e.what() << std::endl;
+        return 1;
+    }
     return 0;
 }
