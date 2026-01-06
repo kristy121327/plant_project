@@ -1,0 +1,8 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake
+C:/vcpkg/installed/x64-windows/share/gtest/GTestConfig.cmake
+C:/vcpkg/installed/x64-windows/share/gtest/GTestConfigVersion.cmake
+C:/vcpkg/installed/x64-windows/share/gtest/GTestTargets-debug.cmake
+C:/vcpkg/installed/x64-windows/share/gtest/GTestTargets-release.cmake
+C:/vcpkg/installed/x64-windows/share/gtest/GTestTargets.cmake
+D:/study/OPPPO/Prac1_MikhKY1/plant_project/tests/CMakeLists.txt

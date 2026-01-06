@@ -1,0 +1,9 @@
+{
+	"InstallScripts" : 
+	[
+		"D:/study/OPPPO/Prac1_MikhKY1/plant_project/build/cmake_install.cmake",
+		"D:/study/OPPPO/Prac1_MikhKY1/plant_project/build/src/cmake_install.cmake",
+		"D:/study/OPPPO/Prac1_MikhKY1/plant_project/build/tests/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

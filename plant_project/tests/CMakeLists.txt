@@ -1,8 +1,14 @@
-enable_testing()
-find_package(GTest REQUIRED)
-include_directories(${GTEST_INCLUDE_DIRS} ../src)
+find_package(GTest CONFIG REQUIRED)
 
 add_executable(runTests test_plants.cpp)
-target_link_libraries(runTests plants GTest::GTest GTest::Main)
 
-add_test(NAME PlantTests COMMAND runTests)
+target_link_libraries(runTests
+    plants
+    GTest::gtest
+    GTest::gtest_main
+)
+
+add_test(
+    NAME PlantTests
+    COMMAND runTests
+)

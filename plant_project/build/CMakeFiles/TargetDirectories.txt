@@ -1,0 +1,11 @@
+D:/study/OPPPO/Prac1_MikhKY1/plant_project/build/CMakeFiles/Experimental.dir
+D:/study/OPPPO/Prac1_MikhKY1/plant_project/build/CMakeFiles/Nightly.dir
+D:/study/OPPPO/Prac1_MikhKY1/plant_project/build/CMakeFiles/Continuous.dir
+D:/study/OPPPO/Prac1_MikhKY1/plant_project/build/CMakeFiles/NightlyMemoryCheck.dir
+D:/study/OPPPO/Prac1_MikhKY1/plant_project/build/CMakeFiles/RUN_TESTS.dir
+D:/study/OPPPO/Prac1_MikhKY1/plant_project/build/CMakeFiles/ALL_BUILD.dir
+D:/study/OPPPO/Prac1_MikhKY1/plant_project/build/CMakeFiles/ZERO_CHECK.dir
+D:/study/OPPPO/Prac1_MikhKY1/plant_project/build/src/CMakeFiles/plants.dir
+D:/study/OPPPO/Prac1_MikhKY1/plant_project/build/src/CMakeFiles/RUN_TESTS.dir
+D:/study/OPPPO/Prac1_MikhKY1/plant_project/build/tests/CMakeFiles/runTests.dir
+D:/study/OPPPO/Prac1_MikhKY1/plant_project/build/tests/CMakeFiles/RUN_TESTS.dir
