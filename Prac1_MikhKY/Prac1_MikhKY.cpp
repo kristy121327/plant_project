@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <fstream>
 #include <vector>
 #include <memory>
@@ -9,40 +9,40 @@
 using namespace std;
 
 enum class Month {
-    ЯНВАРЬ, ФЕВРАЛЬ, МАРТ, АПРЕЛЬ, МАЙ, ИЮНЬ,
-    ИЮЛЬ, АВГУСТ, СЕНТЯБРЬ, ОКТЯБРЬ, НОЯБРЬ, ДЕКАБРЬ
+    JAN, FEB, MAR, APR, MAY, JUN,
+    JUL, AUG, SEP, OCT, NOV, DEC
 };
 
 Month stringToMonth(const string& m) {
-    if (m == "ЯНВАРЬ") return Month::ЯНВАРЬ;
-    if (m == "ФЕВРАЛЬ") return Month::ФЕВРАЛЬ;
-    if (m == "МАРТ") return Month::МАРТ;
-    if (m == "АПРЕЛЬ") return Month::АПРЕЛЬ;
-    if (m == "МАЙ") return Month::МАЙ;
-    if (m == "ИЮНЬ") return Month::ИЮНЬ;
-    if (m == "ИЮЛЬ") return Month::ИЮЛЬ;
-    if (m == "АВГУСТ") return Month::АВГУСТ;
-    if (m == "СЕНТЯБРЬ") return Month::СЕНТЯБРЬ;
-    if (m == "ОКТЯБРЬ") return Month::ОКТЯБРЬ;
-    if (m == "НОЯБРЬ") return Month::НОЯБРЬ;
-    if (m == "ДЕКАБРЬ") return Month::ДЕКАБРЬ;
+    if (m == "ЯНВАРЬ") return Month::JAN;
+    if (m == "ФЕВРАЛЬ") return Month::FEB;
+    if (m == "МАРТ") return Month::MAR;
+    if (m == "АПРЕЛЬ") return Month::APR;
+    if (m == "МАЙ") return Month::MAY;
+    if (m == "ИЮНЬ") return Month::JUN;
+    if (m == "ИЮЛЬ") return Month::JUL;
+    if (m == "АВГУСТ") return Month::AUG;
+    if (m == "СЕНТЯБРЬ") return Month::SEP;
+    if (m == "ОКТЯБРЬ") return Month::OCT;
+    if (m == "НОЯБРЬ") return Month::NOV;
+    if (m == "ДЕКАБРЬ") return Month::DEC;
     throw invalid_argument("Неизвестный месяц");
 }
 
 string monthToString(Month m) {
     switch (m) {
-    case Month::ЯНВАРЬ: return "Январь";
-    case Month::ФЕВРАЛЬ: return "Февраль";
-    case Month::МАРТ: return "Март";
-    case Month::АПРЕЛЬ: return "Апрель";
-    case Month::МАЙ: return "Май";
-    case Month::ИЮНЬ: return "Июнь";
-    case Month::ИЮЛЬ: return "Июль";
-    case Month::АВГУСТ: return "Август";
-    case Month::СЕНТЯБРЬ: return "Сентябрь";
-    case Month::ОКТЯБРЬ: return "Октябрь";
-    case Month::НОЯБРЬ: return "Ноябрь";
-    case Month::ДЕКАБРЬ: return "Декабрь";
+    case Month::JAN: return "Январь";
+    case Month::FEB: return "Февраль";
+    case Month::MAR: return "Март";
+    case Month::APR: return "Апрель";
+    case Month::MAY: return "Май";
+    case Month::JUN: return "Июнь";
+    case Month::JUL: return "Июль";
+    case Month::AUG: return "Август";
+    case Month::SEP: return "Сентябрь";
+    case Month::OCT: return "Октябрь";
+    case Month::NOV: return "Ноябрь";
+    case Month::DEC: return "Декабрь";
     }
     return "";
 }
@@ -236,6 +236,7 @@ void processFile(const string& filename, PlantContainer& c) {
 }
 
 int main() {
+    _CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
     setlocale(LC_ALL, "Russian");
 
     ofstream f("plants.txt");
