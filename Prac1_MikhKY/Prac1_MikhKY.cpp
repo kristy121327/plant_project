@@ -14,6 +14,14 @@ enum class Month {
     JUL, AUG, SEP, OCT, NOV, DEC
 };
 
+string extractQuoted(const string& s) {
+    size_t p1 = s.find('\'');
+    size_t p2 = s.find('\'', p1 + 1);
+    if (p1 != string::npos && p2 != string::npos)
+        return s.substr(p1 + 1, p2 - p1 - 1);
+    return "";
+}
+
 Month stringToMonth(const string& m) {
     if (m == "ЯНВАРЬ") return Month::JAN;
     if (m == "ФЕВРАЛЬ") return Month::FEB;
@@ -76,10 +84,7 @@ public:
 
     bool matches(const string& c) const override {
         if (c.find("название") != string::npos) {
-            size_t p1 = c.find('\'');
-            size_t p2 = c.find('\'', p1 + 1);
-            return p1 != string::npos && p2 != string::npos &&
-                name == c.substr(p1 + 1, p2 - p1 - 1);
+            return name == extractQuoted(c);
         }
         if (c.find("возраст") != string::npos) {
             if (c.find(">") != string::npos)
@@ -106,10 +111,7 @@ public:
 
     bool matches(const string& c) const override {
         if (c.find("название") != string::npos) {
-            size_t p1 = c.find('\'');
-            size_t p2 = c.find('\'', p1 + 1);
-            return p1 != string::npos && p2 != string::npos &&
-                name == c.substr(p1 + 1, p2 - p1 - 1);
+            return name == extractQuoted(c);
         }
         if (c.find("месяц") != string::npos && c.find("==") != string::npos) {
             string v = c.substr(c.find("==") + 2);
@@ -133,10 +135,7 @@ public:
 
     bool matches(const string& c) const override {
         if (c.find("название") != string::npos) {
-            size_t p1 = c.find('\'');
-            size_t p2 = c.find('\'', p1 + 1);
-            return p1 != string::npos && p2 != string::npos &&
-                name == c.substr(p1 + 1, p2 - p1 - 1);
+            return name == extractQuoted(c);
         }
         if (c.find("длина") != string::npos) {
             if (c.find(">") != string::npos)
