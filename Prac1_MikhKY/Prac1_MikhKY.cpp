@@ -215,21 +215,13 @@ void processFile(const string& filename, PlantContainer& c) {
     string line;
 
     while (getline(f, line)) {
-        istringstream iss(line);
-        string cmd;
-        iss >> cmd;
-
-        if (cmd == "ADD") {
-            string data;
-            getline(iss, data);
-            c.add(parseAdd(data));
-        }
-        else if (cmd == "REM") {
-            string cond;
-            getline(iss, cond);
-            c.remove(cond);
-        }
-        else if (cmd == "PRINT") {
+        if (line.substr(0, 3) == "ADD") {
+            c.add(parseAdd(line.substr(4)));
+        } 
+        else if (line.substr(0, 3) == "REM") {
+            c.remove(line.substr(4));
+        } 
+        else if (line == "PRINT") {
             c.print();
         }
     }
