@@ -1,3 +1,4 @@
+﻿#define _CRTDBG_MAP_ALLOC
 #include <iostream>
 #include <fstream>
 #include <vector>
@@ -154,7 +155,7 @@ class PlantContainer {
 
 public:
     void add(unique_ptr<Plant> p) {
-        plants.push_back(move(p));
+        plants.push_back(std::move(p));
     }
 
     void remove(const string& condition) {
