@@ -52,8 +52,8 @@ string monthToString(Month m) {
     case Month::OCT: return "Октябрь";
     case Month::NOV: return "Ноябрь";
     case Month::DEC: return "Декабрь";
+    throw invalid_argument("Неизвестный месяц");
     }
-    return "";
 }
 
 class Plant {
